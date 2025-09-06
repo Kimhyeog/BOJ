@@ -1,29 +1,39 @@
+
 C = int(input())
 
 for i in range(0,C) :
-    result = 0
-    avg = 0
-    sum = 0
+    
+    data = list(map(int, input().split()))
+    N = data[0]
+    
+
+    avg = (sum(data)-N) / N
     cnt = 0
-
-    N = int(input())
-
-    score_arr = list(map(int, input().split()))
-    
-    for j in range(0,N) :
-        sum+=score_arr[j]
-
-    avg = sum / N
-
-    for j in range(0,N) :
-        if score_arr[j]>avg :
+    for i in range(1,N+1) :
+        if data[i] > avg :
             cnt+=1
-    
-    result = N/cnt
 
-    print(f"{result:.3f}")
+    #백분율 계산
+    pnt=cnt/N * 100
 
-    C = int(input())
+    print(f"{pnt:.3f}%")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 for _ in range(C):
     # 1. 한 줄 입력을 받아 N과 점수 리스트를 분리합니다.

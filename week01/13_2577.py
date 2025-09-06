@@ -16,3 +16,24 @@ for ch in result:
 # 결과 출력
 for count in digit_cnt:
     print(count)
+
+
+digit_num = ['0','1','2','3','4','5','6','7','8','9']
+digit_cnt = [0,0,0,0,0,0,0,0,0,0]
+
+num = 1
+
+for i in range(0,3) :
+    num *= int(input())
+
+num = str(num)
+
+#숫자 길이만큼 순회
+for i in range(0,len(num)) :
+    for j in range(0,10) :
+        if num[i] == digit_num[j] :
+            digit_cnt[j]+=1
+
+
+for i in range(0,10) :
+    print(digit_cnt[i])
